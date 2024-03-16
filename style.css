@@ -28,11 +28,13 @@
     border-radius: 5px;
     border-color: red;
 }
-.input-btn{
-    background-color: grey;
-    margin-top: 5px;
-}
 .pers{
     float: right;
     font-size: 20px;
+    margin-top: 5px;
+    margin: auto;
+}
+.btn-blue{
+    background-color: blueviolet;
+    margin-top: 10px;
 }
