@@ -81,21 +81,17 @@ $(document).ready(function(){
 		})
 	})
 	$('#eye_button').on('click',function(){
-		$('.form-control').each(function(){
-			if($('#pswd').type() == 'password'){
-				$('#pswd').addType('text')
-			}else{
-				$('#pswd').addType('password')
-			}
-		})
+		if($('#pswd').attr('type') == 'password'){
+			$('#pswd').attr('type','text');
+		}else{
+			$('#pswd').attr('type','password')
+		}
 	})
 	$('#eye_button2').on('click',function(){
-		$('.form-control').each(function(){
-			if($('#pswd2').type() == 'password'){
-				$('#pswd2').addType('text')
-			}else{
-				$('#pswd2').addType('text')
-			}
-		})
+		if($('#pswd2').attr('type') == 'password'){
+			$('#pswd2').attr('type','text');
+		}else{
+			$('#pswd2').attr('type','password')
+		}
 	})
 })
