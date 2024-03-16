@@ -94,4 +94,27 @@ $(document).ready(function(){
 			$('#pswd2').attr('type','password')
 		}
 	})
+	$('#rega_pr_btn').on('click',function(){
+		if(validation()){
+			$.ajax({
+			  method: "POST",
+			  url: "/ajax/registration",
+			  contentType: "application/json",
+			  data: JSON.stringify({ 
+			  	login: $('#login_pr').val(), 
+			  	pswd: $('#class').val(),
+			  	name: $('#name_pr').val(),
+			  	surname: $('#name_saller').val(),
+			  	phone: $('#infa').val(),
+			  })
+			})
+			.done(function(result) {
+				if(result){
+					window.location.href = '/table'
+				}else{
+
+				}
+			});
+		}
+	})
 })
